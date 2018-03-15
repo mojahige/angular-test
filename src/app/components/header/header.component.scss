@@ -1,5 +1,27 @@
 @charset 'utf-8';
 
-.header {
-  color: black;
+.Header {
+  @at-root {
+    & {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: black;
+    }
+
+    .Header__inner {
+      display: flex;
+      height: 40px;
+      padding: 0 1rem;
+    }
+
+    .Header__logo {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 auto 0 0;
+      font-size: 16px; // 1rem = 14px
+      color: white;
+    }
+  }
 }
