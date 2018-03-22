@@ -1,4 +1,4 @@
-<div class='ChatMessage'>
+<div class='ChatMessage' *ngIf="hasMessage">
   <div class='ChatMessage__inner'>
     <ul class="ChatMessage__list">
       <li class="ChatMessage__item" *ngFor="let message of messages">

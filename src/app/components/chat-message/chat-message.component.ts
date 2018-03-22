@@ -17,4 +17,8 @@ export class ChatMessageComponent implements OnInit {
       .getMessage()
       .subscribe(messaegs => (this.messages = messaegs))
   }
+
+  get hasMessage() {
+    return !!this.messages.length
+  }
 }
