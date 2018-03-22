@@ -13,5 +13,6 @@ export class ChatInputComponent implements OnInit {
 
   onSubmit(f: NgForm) {
     console.log(f.value)
+    f.reset()
   }
 }
