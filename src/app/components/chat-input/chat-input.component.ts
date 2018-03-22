@@ -12,6 +12,6 @@ export class ChatInputComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit(f: NgForm) {
-    console.log(f)
+    console.log(f.value)
   }
 }
