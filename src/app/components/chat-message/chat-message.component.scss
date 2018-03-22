@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.ChatMessage {
+  @at-root {
+    .ChatMessage__inner {
+      padding: 1rem;
+    }
+
+    .ChatMessage__list {
+      list-style: none;
+    }
+
+    .ChatMessage__item {
+      width: 60%;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 2px solid #3f51b5;
+      border-radius: 4px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
