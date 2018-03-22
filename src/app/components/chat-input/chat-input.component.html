@@ -1,6 +1,6 @@
 <div class="ChatInput">
   <div class="ChatInput__inner">
-    <form action="#">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="myChat">
         <label class="mdl-textfield__label" for="myChat">Text...</label>
