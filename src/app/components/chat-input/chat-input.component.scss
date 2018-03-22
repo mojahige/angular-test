@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.ChatInput {
+  @at-root {
+    & {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      background-color: lighten(black, 90%);
+    }
+
+    & .mdl-textfield {
+      width: 100%;
+    }
+
+    .ChatInput__inner {
+      padding: 1rem;
+    }
+  }
+}
