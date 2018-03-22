@@ -13,6 +13,8 @@ export class ChatMessageComponent implements OnInit {
   constructor(public chatService: ChatService) {}
 
   ngOnInit() {
-    this.messages = this.chatService.getMessage()
+    this.chatService
+      .getMessage()
+      .subscribe(messaegs => (this.messages = messaegs))
   }
 }
