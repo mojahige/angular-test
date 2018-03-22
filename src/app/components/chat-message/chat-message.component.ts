@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-
+import { Message } from '../../Message'
 import { ChatService } from '../../services/chat.service'
 
 @Component({
@@ -8,7 +8,7 @@ import { ChatService } from '../../services/chat.service'
   styleUrls: ['./chat-message.component.scss']
 })
 export class ChatMessageComponent implements OnInit {
-  messages: string[] = []
+  messages: Message[]
 
   constructor(public chatService: ChatService) {}
 
