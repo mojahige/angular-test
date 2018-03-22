@@ -7,15 +7,19 @@ import { HeaderComponent } from './components/header/header.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { ChatInputComponent } from './components/chat-input/chat-input.component'
 
+import { ChatService } from './services/chat.service';
+import { ChatMessageComponent } from './components/chat-message/chat-message.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ChatInputComponent
+    ChatInputComponent,
+    ChatMessageComponent
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
