@@ -6,13 +6,19 @@
         <label class="mdl-textfield__label" for="myChat">Text...</label>
       </div>
     </form> -->
-    <form #chat="ngForm" (ngSubmit)="onSubmit(chat)" novalidate>
-      <mat-form-field>
-        <textarea matInput placeholder="Type a comment" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" name="comment"
-          ngModel></textarea>
-      </mat-form-field>
+    <form class="ChatInput__form" #chat="ngForm" (ngSubmit)="onSubmit(chat)" novalidate>
+      <div class='ChatInput__formInner'>
+        <div class='ChatInput__text'>
+          <mat-form-field>
+            <textarea matInput placeholder="Type a comment" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" name="comment"
+              ngModel></textarea>
+          </mat-form-field>
+        </div>
 
-      <button type="submit" mat-raised-button color="primary">Primary</button>
+        <div class='ChatInput__submit'>
+          <button type="submit" mat-raised-button color="primary">Primary</button>
+        </div>
+      </div>
     </form>
   </div>
 </div>

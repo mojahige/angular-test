@@ -15,6 +15,11 @@ export class ChatInputComponent implements OnInit {
 
   onSubmit(f: NgForm) {
     console.log(f.value)
+
+    if (!f.value.comment) {
+      return
+    }
+
     this.chatService.addMessage(f.value.comment)
     f.reset()
   }
