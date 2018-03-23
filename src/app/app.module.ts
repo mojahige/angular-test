@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms' // <-- NgModel lives here
-
+import { MatInputModule } from '@angular/material/input'
+import { MatButtonModule } from '@angular/material/button'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AppComponent } from './app.component'
@@ -20,7 +21,13 @@ import { ChatMessageComponent } from './components/chat-message/chat-message.com
     ChatInputComponent,
     ChatMessageComponent
   ],
-  imports: [BrowserModule, FormsModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    MatButtonModule,
+    MatInputModule,
+    BrowserAnimationsModule
+  ],
   providers: [ChatService],
   bootstrap: [AppComponent]
 })
