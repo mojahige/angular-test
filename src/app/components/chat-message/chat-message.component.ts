@@ -21,4 +21,8 @@ export class ChatMessageComponent implements OnInit {
   get hasMessage() {
     return !!this.messages.length
   }
+
+  replaceNewLine(message: string) {
+    return message.replace(/\r\n|\n|\r/g, '<br>')
+  }
 }
