@@ -2,7 +2,7 @@
   <div class='ChatMessage__inner'>
     <ul class="ChatMessage__list">
       <li class="ChatMessage__item" *ngFor="let message of messages">
-        <span class="ChatMessage__comment" [innerHTML]=replaceNewLine(message.message)></span>
+        <pre class="ChatMessage__comment">{{message.message}}</pre>
         <span class="ChatMessage__date">{{message.date | date: 'yyyy-MM-dd HH:mm:ss'}}</span>
       </li>
     </ul>
