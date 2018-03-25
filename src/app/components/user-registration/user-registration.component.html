@@ -1,4 +1,4 @@
-<div class="UserRegistration" [ngClass]="{'-hasUser': hasUser()}">
+<div class="UserRegistration" [ngClass]="{'-hasUser': hasUser}" *ngIf="!hasUser" @hasUserAnimation>
   <div class="UserRegistration__inner">
     <form class="UserRegistration__form" #userRegistration="ngForm" (ngSubmit)="onSubmit(userRegistration)">
       <div class="UserRegistration__formInner">

@@ -2,21 +2,28 @@ import { Component, OnInit } from '@angular/core'
 import { NgForm } from '@angular/forms'
 import { User } from '../../User'
 import { UserService } from '../../services/user.service'
+import { trigger, state, transition, animate, style } from '@angular/animations'
 
 @Component({
   selector: 'app-user-registration',
   templateUrl: './user-registration.component.html',
-  styleUrls: ['./user-registration.component.scss']
+  styleUrls: ['./user-registration.component.scss'],
+  animations: [
+    trigger('hasUserAnimation', [
+      state('*', style({ opacity: 1, visibility: 'visible' })),
+      state('void', style({ opacity: 0, visibility: 'hidden' })),
+      transition('* => void', [animate('400ms')])
+    ])
+  ]
 })
 export class UserRegistrationComponent implements OnInit {
   user: User | null = null
+  hasUser = false
 
   constructor(private userService: UserService) {}
 
-  ngOnInit() {}
-
-  hasUser(): boolean {
-    return !!this.user
+  ngOnInit() {
+    console.log(this.hasUser)
   }
 
   onSubmit(f: NgForm): void {
@@ -31,6 +38,7 @@ export class UserRegistrationComponent implements OnInit {
     }
 
     this.user = user
+    this.hasUser = true
     this.userService.addUser(this.user)
   }
 }
