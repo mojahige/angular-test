@@ -29,11 +29,13 @@ export class UserRegistrationComponent implements OnInit {
       return
     }
 
-    const user = {
+    this.setUser({
       nickname: f.value.nickname
-    }
+    })
+  }
 
-    this.user = user
+  setUser(newUser: User): void {
+    this.user = newUser
     this.hasUser = true
     this.userService.addUser(this.user)
   }
