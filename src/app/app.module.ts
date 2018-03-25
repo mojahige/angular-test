@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { ChatInputComponent } from './components/chat-input/chat-input.component'
 import { MessageBoardComponent } from './components/message-board/message-board.component'
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MessageBoardComponent } from './components/message-board/message-board.
     HeaderComponent,
     FooterComponent,
     ChatInputComponent,
-    MessageBoardComponent
+    MessageBoardComponent,
+    UserRegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { MessageBoardComponent } from './components/message-board/message-board.
     MatInputModule,
     BrowserAnimationsModule
   ],
-  providers: [ChatService],
+  providers: [ChatService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
