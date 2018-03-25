@@ -3,11 +3,11 @@ import { Message } from '../../Message'
 import { ChatService } from '../../services/chat.service'
 
 @Component({
-  selector: 'app-chat-message',
-  templateUrl: './chat-message.component.html',
-  styleUrls: ['./chat-message.component.scss']
+  selector: 'app-message-board',
+  templateUrl: './message-board.component.html',
+  styleUrls: ['./message-board.component.scss']
 })
-export class ChatMessageComponent implements OnInit {
+export class MessageBoardComponent implements OnInit {
   messages: Message[]
 
   constructor(public chatService: ChatService) {}

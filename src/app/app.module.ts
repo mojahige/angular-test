@@ -11,7 +11,7 @@ import { FooterComponent } from './components/footer/footer.component'
 import { ChatInputComponent } from './components/chat-input/chat-input.component'
 
 import { ChatService } from './services/chat.service'
-import { ChatMessageComponent } from './components/chat-message/chat-message.component'
+import { MessageBoardComponent } from './components/message-board/message-board.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ChatMessageComponent } from './components/chat-message/chat-message.com
     HeaderComponent,
     FooterComponent,
     ChatInputComponent,
-    ChatMessageComponent
+    MessageBoardComponent
   ],
   imports: [
     BrowserModule,
