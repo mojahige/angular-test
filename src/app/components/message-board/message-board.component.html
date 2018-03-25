@@ -1,9 +1,9 @@
 <div class="MessageBoard" *ngIf="hasMessage">
   <div class="MessageBoard__inner">
     <ul class="MessageBoard__list">
-      <li class="MessageBoard__item" *ngFor="let message of messages">
-        <pre class="MessageBoard__comment">{{message.message}}</pre>
-        <span class="MessageBoard__date">{{message.date | date: 'yyyy-MM-dd HH:mm:ss'}}</span>
+      <li class="MessageBoard__item" *ngFor="let item of messages">
+        <pre class="MessageBoard__comment">{{item.message}}</pre>
+        <span class="MessageBoard__date">{{item.date | date: 'yyyy-MM-dd HH:mm:ss'}}</span>
       </li>
     </ul>
   </div>
