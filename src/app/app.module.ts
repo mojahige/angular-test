@@ -13,7 +13,8 @@ import { HeaderComponent } from './components/header/header.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { ChatInputComponent } from './components/chat-input/chat-input.component'
 import { MessageBoardComponent } from './components/message-board/message-board.component'
-import { UserRegistrationComponent } from './components/user-registration/user-registration.component'
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { ChatStageComponent } from './components/chat-stage/chat-stage.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
     FooterComponent,
     ChatInputComponent,
     MessageBoardComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    ChatStageComponent
   ],
   imports: [
     BrowserModule,
