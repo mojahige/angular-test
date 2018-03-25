@@ -1,11 +1,5 @@
 <div class="ChatInput">
   <div class="ChatInput__inner">
-    <!-- 
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" id="myChat" type="text" name="comment" ngModel>
-        <label class="mdl-textfield__label" for="myChat">Text...</label>
-      </div>
-    </form> -->
     <form class="ChatInput__form" #chat="ngForm" (ngSubmit)="onSubmit(chat)" novalidate>
       <div class='ChatInput__formInner'>
         <div class='ChatInput__text'>
