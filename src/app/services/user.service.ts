@@ -3,23 +3,19 @@ import { User } from '../User'
 
 @Injectable()
 export class UserService {
-  user: User
+  users: User[]
 
   constructor() {}
 
-  get nickname(): string {
-    return this.user.nickname
-  }
-
-  set nickname(nickname: string) {
-    if (nickname === '') {
+  set user(user: User) {
+    if (!user) {
       return
     }
 
-    this.user.nickname = nickname
+    this.users.push(user)
   }
 
-  get hasNickname(): boolean {
-    return !!this.user.nickname
+  hasUser(user: User) {
+    return this.users.includes(user)
   }
 }
