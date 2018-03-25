@@ -13,14 +13,14 @@ export class ChatService {
     return of(this.messages)
   }
 
-  addMessage(message: string) {
+  addMessage(message: string): void {
     this.messages.push({
       message,
       date: new Date()
     })
   }
 
-  clear() {
+  clear(): void {
     this.messages = []
   }
 }
