@@ -22,16 +22,12 @@ export class UserRegistrationComponent implements OnInit {
 
   constructor(private userService: UserService) {}
 
-  ngOnInit() {
-    console.log(this.hasUser)
-  }
+  ngOnInit() {}
 
   onSubmit(f: NgForm): void {
     if (!f.value.nickname) {
       return
     }
-
-    console.log(f)
 
     const user = {
       nickname: f.value.nickname
