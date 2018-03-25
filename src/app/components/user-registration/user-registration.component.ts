@@ -37,6 +37,6 @@ export class UserRegistrationComponent implements OnInit {
   setUser(newUser: User): void {
     this.user = newUser
     this.hasUser = true
-    this.userService.addUser(this.user)
+    this.userService.setUser(this.user)
   }
 }

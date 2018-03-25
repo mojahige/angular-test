@@ -3,19 +3,15 @@ import { User } from '../User'
 
 @Injectable()
 export class UserService {
-  users: User[] = []
+  users: User | null = null
 
   constructor() {}
 
-  addUser(user: User) {
+  setUser(user: User) {
     if (!user) {
       return
     }
 
-    this.users.push(user)
-  }
-
-  hasUser(user: User) {
-    return this.users.includes(user)
+    this.users = user
   }
 }
