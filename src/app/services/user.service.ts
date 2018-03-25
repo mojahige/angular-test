@@ -3,11 +3,11 @@ import { User } from '../User'
 
 @Injectable()
 export class UserService {
-  users: User[]
+  users: User[] = []
 
   constructor() {}
 
-  set user(user: User) {
+  addUser(user: User) {
     if (!user) {
       return
     }

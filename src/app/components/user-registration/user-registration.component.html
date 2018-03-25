@@ -1,3 +1,17 @@
-<p>
-  user-registration works!
-</p>
+<div class="UserRegistration" [ngClass]="{'-hasUser': hasUser()}">
+  <div class="UserRegistration__inner">
+    <form class="UserRegistration__form" #userRegistration="ngForm" (ngSubmit)="onSubmit(userRegistration)">
+      <div class="UserRegistration__formInner">
+        <div class="UserRegistration__nickname">
+          <mat-form-field>
+            <input matInput placeholder="Type your nickname 😏" name="nickname" ngModel>
+          </mat-form-field>
+        </div>
+
+        <div class='UserRegistration__submit'>
+          <button type="submit" mat-raised-button color="primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
