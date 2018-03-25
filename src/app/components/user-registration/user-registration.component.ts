@@ -12,7 +12,7 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
     trigger('hasUserAnimation', [
       state('*', style({ opacity: 1, visibility: 'visible' })),
       state('void', style({ opacity: 0, visibility: 'hidden' })),
-      transition('* => void', [animate('400ms')])
+      transition('* => void', [animate('200ms')])
     ])
   ]
 })
