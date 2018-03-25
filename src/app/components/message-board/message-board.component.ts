@@ -13,12 +13,16 @@ export class MessageBoardComponent implements OnInit {
   constructor(public chatService: ChatService) {}
 
   ngOnInit() {
+    this.getMessage()
+  }
+
+  getMessage() {
     this.chatService
       .getMessage()
       .subscribe(messaegs => (this.messages = messaegs))
   }
 
-  get hasMessage() {
+  hasMessage() {
     return !!this.messages.length
   }
 }
