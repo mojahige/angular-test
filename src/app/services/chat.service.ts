@@ -14,11 +14,9 @@ export class ChatService {
   }
 
   addMessage(message: string) {
-    const date = new Date()
-
     this.messages.push({
       message,
-      date
+      date: new Date()
     })
   }
 
