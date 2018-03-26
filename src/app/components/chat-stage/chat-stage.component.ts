@@ -8,17 +8,7 @@ import { User } from '../../User'
   styleUrls: ['./chat-stage.component.scss']
 })
 export class ChatStageComponent implements OnInit {
-  user: User = null
-
   constructor(public userService: UserService) {}
 
   ngOnInit() {}
-
-  getUser() {
-    const user = this.userService.getUser()
-
-    if (user) {
-      return user.nickname
-    }
-  }
 }

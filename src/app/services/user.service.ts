@@ -5,13 +5,11 @@ import { of } from 'rxjs/observable/of'
 
 @Injectable()
 export class UserService {
-  user: User = null
+  user: User = {
+    nickname: ''
+  }
 
   constructor() {}
-
-  getUser() {
-    return this.user
-  }
 
   setUser(user: User) {
     this.user = user
