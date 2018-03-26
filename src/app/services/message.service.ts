@@ -13,11 +13,8 @@ export class MessageService {
     return of(this.messages)
   }
 
-  addMessage(message: string): void {
-    this.messages.push({
-      message,
-      date: new Date()
-    })
+  addMessage(message: Message): void {
+    this.messages.push(message)
   }
 
   clear(): void {
