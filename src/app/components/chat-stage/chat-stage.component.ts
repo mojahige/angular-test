@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { UserService } from '../../services/user.service'
+import { User } from '../../User'
 
 @Component({
   selector: 'app-chat-stage',
@@ -6,7 +8,17 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./chat-stage.component.scss']
 })
 export class ChatStageComponent implements OnInit {
-  constructor() {}
+  user: User = null
+
+  constructor(public userService: UserService) {}
 
   ngOnInit() {}
+
+  getUser() {
+    const user = this.userService.getUser()
+
+    if (user) {
+      return user.nickname
+    }
+  }
 }

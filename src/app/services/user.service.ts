@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core'
 import { User } from '../User'
+import { Observable } from 'rxjs/Observable'
+import { of } from 'rxjs/observable/of'
 
 @Injectable()
 export class UserService {
-  users: User | null = null
+  user: User = null
 
   constructor() {}
 
-  setUser(user: User) {
-    if (!user) {
-      return
-    }
+  getUser() {
+    return this.user
+  }
 
-    this.users = user
+  setUser(user: User) {
+    this.user = user
   }
 }
