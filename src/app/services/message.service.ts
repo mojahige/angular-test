@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable'
 import { of } from 'rxjs/observable/of'
 
 @Injectable()
-export class ChatService {
+export class MessageService {
   messages: Message[] = []
 
   constructor() {}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Message } from '../../Message'
-import { ChatService } from '../../services/chat.service'
+import { MessageService } from '../../services/message.service'
 
 @Component({
   selector: 'app-message-board',
@@ -10,17 +10,9 @@ import { ChatService } from '../../services/chat.service'
 export class MessageBoardComponent implements OnInit {
   messages: Message[]
 
-  constructor(public chatService: ChatService) {}
+  constructor(public messageService: MessageService) {}
 
-  ngOnInit() {
-    this.getMessage()
-  }
-
-  getMessage() {
-    this.chatService
-      .getMessage()
-      .subscribe(messaegs => (this.messages = messaegs))
-  }
+  ngOnInit() {}
 
   hasMessage() {
     return !!this.messages.length

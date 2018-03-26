@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import { ChatService } from './services/chat.service'
+import { MessageService } from './services/message.service'
 import { UserService } from './services/user.service'
 
 import { AppComponent } from './app.component'
@@ -13,7 +13,7 @@ import { HeaderComponent } from './components/header/header.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { ChatInputComponent } from './components/chat-input/chat-input.component'
 import { MessageBoardComponent } from './components/message-board/message-board.component'
-import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component'
 import { ChatStageComponent } from './components/chat-stage/chat-stage.component'
 
 @NgModule({
@@ -33,7 +33,7 @@ import { ChatStageComponent } from './components/chat-stage/chat-stage.component
     MatInputModule,
     BrowserAnimationsModule
   ],
-  providers: [ChatService, UserService],
+  providers: [MessageService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

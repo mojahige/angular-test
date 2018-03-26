@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { NgForm } from '@angular/forms'
 
-import { ChatService } from '../../services/chat.service'
+import { MessageService } from '../../services/message.service'
 
 @Component({
   selector: 'app-chat-input',
@@ -9,7 +9,7 @@ import { ChatService } from '../../services/chat.service'
   styleUrls: ['./chat-input.component.scss']
 })
 export class ChatInputComponent implements OnInit {
-  constructor(private chatService: ChatService) {}
+  constructor(private messageService: MessageService) {}
 
   ngOnInit() {}
 
@@ -18,7 +18,7 @@ export class ChatInputComponent implements OnInit {
       return
     }
 
-    this.chatService.addMessage(f.value.comment)
+    this.messageService.addMessage(f.value.comment)
     f.reset()
   }
 }
