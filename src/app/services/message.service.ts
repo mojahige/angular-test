@@ -9,10 +9,6 @@ export class MessageService {
 
   constructor() {}
 
-  getMessage(): Observable<Message[]> {
-    return of(this.messages)
-  }
-
   addMessage(message: Message): void {
     this.messages.push(message)
   }

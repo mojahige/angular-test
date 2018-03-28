@@ -1,9 +1,9 @@
-<div class="ChatStage" *ngIf="userService.user.nickname">
+<div class="ChatStage" *ngIf="user">
   <div class="ChatStage__messageBoard">
     <app-message-board></app-message-board>
   </div>
 
   <div class="ChatStage__input">
-    <app-chat-input [nickname]="userService.user.nickname"></app-chat-input>
+    <app-chat-input [nickname]="user.nickname"></app-chat-input>
   </div>
 </div>

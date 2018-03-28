@@ -1,3 +1,1 @@
-export class User {
-  nickname: string
-}
+export type User = { nickname: string } | null
