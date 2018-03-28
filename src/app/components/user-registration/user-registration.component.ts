@@ -17,8 +17,8 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
   ]
 })
 export class UserRegistrationComponent implements OnInit {
-  user: User = null
-  hasUser = false
+  private user: User = null
+  private hasUser = false
 
   constructor(private userService: UserService) {}
 

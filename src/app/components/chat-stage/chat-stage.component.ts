@@ -17,7 +17,7 @@ export class ChatStageComponent implements OnInit {
     this.observeUserUpdate()
   }
 
-  observeUserUpdate() {
+  observeUserUpdate(): void {
     this.userService.userUpdated$.subscribe(
       user => (this.user = user),
       error => console.log(error),

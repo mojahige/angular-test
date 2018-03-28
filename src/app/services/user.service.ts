@@ -7,7 +7,7 @@ import { share } from 'rxjs/operators'
 
 @Injectable()
 export class UserService {
-  user: User = null
+  private user: User = null
 
   public userUpdated$: Observable<User>
 
@@ -17,7 +17,7 @@ export class UserService {
     this.userUpdated$ = new Observable(observer => (this._observer = observer))
   }
 
-  setUser(user: User) {
+  setUser(user: User): void {
     this.user = user
     this._observer.next(this.user)
     this._observer.complete()

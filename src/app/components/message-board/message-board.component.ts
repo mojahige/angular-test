@@ -14,7 +14,7 @@ export class MessageBoardComponent implements OnInit {
 
   ngOnInit() {}
 
-  hasMessage() {
+  hasMessage(): boolean {
     return !!this.messages.length
   }
 }
