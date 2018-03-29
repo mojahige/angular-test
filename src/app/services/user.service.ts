@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core'
 import { User } from '../User'
 import { Observable } from 'rxjs/Observable'
 import { Subject } from 'rxjs/Subject'
-import { Subscriber } from 'rxjs/Subscriber'
 import { share } from 'rxjs/operators'
 
 @Injectable()
@@ -11,7 +10,7 @@ export class UserService {
 
   public userUpdated$: Observable<User>
 
-  private _observer: Subscriber<User>
+  private _observer // これに型付けるとしたら何でしょうな
 
   constructor() {
     this.userUpdated$ = new Observable(observer => (this._observer = observer))
