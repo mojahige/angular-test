@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 .MessageBoard {
+  $gray: lighten(black, 40%);
+
   @at-root {
     .MessageBoard__inner {
       padding: 1rem;
@@ -33,12 +35,14 @@
       align-items: flex-end;
       justify-content: flex-end;
       margin-top: 0.5rem;
-      color: lighten(black, 40%);
+      color: $gray;
       font-size: 12px;
     }
 
     .MessageBoard__nickname {
       margin-right: 0.5em;
+      padding-right: 0.5em;
+      border-right: 1px solid $gray;
     }
 
     .MessageBoard__date {
