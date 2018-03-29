@@ -9,7 +9,7 @@ import { distinctUntilChanged } from 'rxjs/operators'
   styleUrls: ['./chat-stage.component.scss']
 })
 export class ChatStageComponent implements OnInit {
-  user: User = null
+  private user: User = null
 
   constructor(public userService: UserService) {}
 
@@ -17,7 +17,7 @@ export class ChatStageComponent implements OnInit {
     this.observeUserUpdate()
   }
 
-  observeUserUpdate(): void {
+  private observeUserUpdate(): void {
     this.userService.userUpdated$.subscribe(
       user => (this.user = user),
       error => console.log(error),
