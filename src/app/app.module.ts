@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { MessageService } from './services/message.service'
 import { UserService } from './services/user.service'
+import { WebsocketService } from './services/websocket.service'
 
 import { AppComponent } from './app.component'
 import { HeaderComponent } from './components/header/header.component'
@@ -33,7 +34,7 @@ import { ChatStageComponent } from './components/chat-stage/chat-stage.component
     MatInputModule,
     BrowserAnimationsModule
   ],
-  providers: [MessageService, UserService],
+  providers: [MessageService, UserService, WebsocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
