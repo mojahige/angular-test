@@ -16,6 +16,7 @@ export class WebsocketService {
   }
 
   emit(emitName: string, data?): void {
+    console.log('WebsocketService emit')
     this.socket.emit(emitName, data)
   }
 
