@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core'
 import { NgForm } from '@angular/forms'
 import { Message } from '../../Message'
+import { User } from '../../User'
 
 import { MessageService } from '../../services/message.service'
 // import { WebsocketService } from '../../services/websocket.service'
@@ -11,7 +12,7 @@ import { MessageService } from '../../services/message.service'
   styleUrls: ['./chat-input.component.scss']
 })
 export class ChatInputComponent implements OnInit {
-  @Input() nickname: string
+  @Input() user: User = null
 
   constructor(private messageService: MessageService) {}
 
@@ -30,7 +31,7 @@ export class ChatInputComponent implements OnInit {
     return {
       message,
       date: new Date(),
-      nickname: this.nickname
+      nickname: this.user.nickname
     }
   }
 }
