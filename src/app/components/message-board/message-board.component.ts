@@ -8,7 +8,7 @@ import { MessageService } from '../../services/message.service'
   styleUrls: ['./message-board.component.scss']
 })
 export class MessageBoardComponent implements OnInit {
-  messages: Message[]
+  messages: Message[] = []
 
   constructor(public messageService: MessageService) {}
 

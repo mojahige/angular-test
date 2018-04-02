@@ -11,8 +11,9 @@ export class WebsocketService {
   private url = 'http://localhost:5000'
   private socket: any
 
-  connect(query: string): void {
-    this.socket = IO(this.url, { query })
+  connect(): void {
+    // this.socket = IO(this.url, { query })
+    this.socket = IO(this.url)
   }
 
   emit(emitName: string, data?): void {
