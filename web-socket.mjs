@@ -17,8 +17,6 @@ socketIO.on('connection', socket => {
   socket.on('pushMessage', data => {
     messages.push(data)
     socketIO.emit('pushedMessage', messages)
-
-    console.log(messages)
   })
 })
 
