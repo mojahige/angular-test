@@ -4,7 +4,6 @@ import { Message } from '../../Message'
 import { User } from '../../User'
 
 import { MessageService } from '../../services/message.service'
-// import { WebsocketService } from '../../services/websocket.service'
 
 @Component({
   selector: 'app-chat-input',
