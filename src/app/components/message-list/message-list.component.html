@@ -1,10 +1,12 @@
 <ul class="MessageList">
   <li class="MessageList__item" *ngFor="let item of messageService.messages">
-    <pre class="MessageList__message">{{item.message}}</pre>
+    <div class="MessageList__itemInner">
+      <pre class="MessageList__message">{{item.message}}</pre>
 
-    <div class='MessageList__info'>
-      <p class="MessageList__nickname">{{item.nickname}}</p>
-      <p class="MessageList__date">{{item.date | date: 'yyyy-MM-dd HH:mm:ss'}}</p>
+      <div class='MessageList__info'>
+        <p class="MessageList__nickname">{{item.nickname}}</p>
+        <p class="MessageList__date">{{item.date | date: 'yyyy-MM-dd HH:mm:ss'}}</p>
+      </div>
     </div>
   </li>
 </ul>
