@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { NgForm } from '@angular/forms'
 import { User } from '../../User'
-import { UserService } from '../../services/user.service'
 import { trigger, state, transition, animate, style } from '@angular/animations'
+
+import { UserService } from '../../services/user.service'
 
 @Component({
   selector: 'app-user-registration',
