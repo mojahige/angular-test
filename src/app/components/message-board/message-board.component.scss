@@ -1,52 +1,9 @@
 @charset "utf-8";
 
 .MessageBoard {
-  $gray: lighten(black, 40%);
-
   @at-root {
     .MessageBoard__inner {
       padding: 1rem;
-    }
-
-    .MessageBoard__list {
-      list-style: none;
-    }
-
-    .MessageBoard__item {
-      display: flex;
-      flex-direction: column;
-      width: 60%;
-      padding: 1rem 1rem 0.2rem;
-      margin-top: 1rem;
-      border: 2px solid #3f51b5;
-      border-radius: 4px;
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    .MessageBoard__message {
-      font-family: inherit;
-    }
-
-    .MessageBoard__info {
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      margin-top: 0.5rem;
-      color: $gray;
-      font-size: 12px;
-    }
-
-    .MessageBoard__nickname {
-      margin-right: 0.5em;
-      padding-right: 0.5em;
-      border-right: 1px solid $gray;
-    }
-
-    .MessageBoard__date {
-      flex: 0 0 auto;
     }
   }
 }

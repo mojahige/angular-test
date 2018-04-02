@@ -16,6 +16,7 @@ import { ChatInputComponent } from './components/chat-input/chat-input.component
 import { MessageBoardComponent } from './components/message-board/message-board.component'
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component'
 import { ChatStageComponent } from './components/chat-stage/chat-stage.component'
+import { MessageListComponent } from './components/message-list/message-list.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ChatStageComponent } from './components/chat-stage/chat-stage.component
     ChatInputComponent,
     MessageBoardComponent,
     UserRegistrationComponent,
-    ChatStageComponent
+    ChatStageComponent,
+    MessageListComponent
   ],
   imports: [
     BrowserModule,

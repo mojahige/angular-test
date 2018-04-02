@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.MessageList {
+  $gray: lighten(black, 40%);
+
+  @at-root {
+    & {
+      list-style: none;
+    }
+
+    .MessageList__item {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      padding: 1rem 1rem 0.2rem;
+      margin-top: 1rem;
+      border: 2px solid #3f51b5;
+      border-radius: 4px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .MessageList__message {
+      font-family: inherit;
+    }
+
+    .MessageList__info {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin-top: 0.5rem;
+      color: $gray;
+      font-size: 12px;
+    }
+
+    .MessageList__nickname {
+      margin-right: 0.5em;
+      padding-right: 0.5em;
+      border-right: 1px solid $gray;
+    }
+
+    .MessageList__date {
+      flex: 0 0 auto;
+    }
+  }
+}

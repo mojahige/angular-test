@@ -1,14 +1,5 @@
-<div class="MessageBoard" *ngIf="hasMessage">
+<div class="MessageBoard">
   <div class="MessageBoard__inner">
-    <ul class="MessageBoard__list">
-      <li class="MessageBoard__item" *ngFor="let item of messageService.messages">
-        <pre class="MessageBoard__message">{{item.message}}</pre>
-
-        <div class='MessageBoard__info'>
-          <p class="MessageBoard__nickname">{{item.nickname}}</p>
-          <p class="MessageBoard__date">{{item.date | date: 'yyyy-MM-dd HH:mm:ss'}}</p>
-        </div>
-      </li>
-    </ul>
+    <app-message-list></app-message-list>
   </div>
 </div>
